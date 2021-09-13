@@ -1,0 +1,17 @@
+<mat-toolbar class="barraMenu">
+    <mat-toolbar-row style="font-size: 1.5rem;">
+        <span>Meu Boteco</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item [routerLink]="['/produtos']">
+                <span>Produtos</span>
+            </button>
+        <button mat-menu-item>            
+              <span>Mesas</span>
+        </button>
+        </mat-menu>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
