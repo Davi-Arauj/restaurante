@@ -3,11 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './views/home/home.component';
-import { ProdutosListComponent } from './views/home/produtos-list/produtos-list.component';
+import { HeaderComponent} from './components/header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavComponent } from './components/nav/nav.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
 
 
@@ -15,8 +18,10 @@ import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ProdutosListComponent
+    HeaderComponent,
+    FooterComponent,
+    NavComponent
+    
    
     
   ],
@@ -26,7 +31,12 @@ import {MatMenuModule} from '@angular/material/menu';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule
+    
+   
+
   ],
   providers: [],
   bootstrap: [AppComponent]
