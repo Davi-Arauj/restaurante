@@ -1,17 +1,6 @@
 <mat-toolbar class="barraMenu mat-elevation-z4">
     <mat-toolbar-row style="font-size: 1.5rem;">
         <span><a mat-button [routerLink]="['']" class="meuBoteco">Meu Boteco</a></span>
-        <span class="example-spacer"></span>
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item [routerLink]="['/produtos']">
-                <span>Produtos</span>
-            </button>
-        <button mat-menu-item>            
-              <span>Mesas</span>
-        </button>
-        </mat-menu>
-        </button>
+        <i class="title material-icons ">home </i>Inicio
     </mat-toolbar-row>
 </mat-toolbar>

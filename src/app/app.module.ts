@@ -11,7 +11,13 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavComponent } from './components/nav/nav.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import { HomeComponent } from './views/home/home.component';
+import { ProductCrudComponent } from './views/product-crud/product-crud.component';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {HttpClientModule} from '@angular/common/http'
 
 
 
@@ -20,7 +26,10 @@ import {MatListModule} from '@angular/material/list';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent,
+    ProductCrudComponent,
+    ProductCreateComponent
     
    
     
@@ -33,7 +42,11 @@ import {MatListModule} from '@angular/material/list';
     MatIconModule,
     MatMenuModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatCardModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    HttpClientModule
     
    
 
