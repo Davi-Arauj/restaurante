@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import {  HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Product } from './product.model';
 import { Observable } from 'rxjs';
 
@@ -11,11 +11,11 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 
-  baseUrl ="https://meuboteco.herokuapp.com/api/v1/product";
+  baseUrl = "https://meuboteco.herokuapp.com/api/v1/product";
   constructor(private snackBar: MatSnackBar,
-    private http : HttpClient,
-    private router : Router
-    ) { }
+    private http: HttpClient,
+    private router: Router
+  ) { }
 
 
   showMessage(msg: string): void {
@@ -26,25 +26,30 @@ export class ProductService {
     })
   }
 
-  create(product: Product) :Observable<Product>{
-    return this.http.post<Product>(this.baseUrl,product)
+  create(product: Product): Observable<Product> {
+    return this.http.post<Product>(this.baseUrl, product)
   }
 
-  read():Observable<Product[]>{
+  read(): Observable<Product[]> {
     return this.http.get<Product[]>(this.baseUrl)
   }
 
-  readById(id: string): Observable<Product>{
+  readById(id: string): Observable<Product> {
     const url = `${this.baseUrl}/${id}`
     return this.http.get<Product>(url)
   }
 
-  update(product: Product): Observable<Product>{
+  update(product: Product): Observable<Product> {
     const url = `${this.baseUrl}/${product.id}`
-    return this.http.put<Product>(url,product)
+    return this.http.put<Product>(url, product)
   }
 
-  cancel(){
+  delete(id: number): Observable<Product> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.delete<Product>(url)
+  }
+
+  cancel() {
     this.router.navigate(['/products'])
   }
 }
