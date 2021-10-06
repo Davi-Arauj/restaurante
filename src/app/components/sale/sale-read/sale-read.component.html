@@ -1,5 +1,13 @@
+<mat-form-field>
+    <input matInput placeholder="Codigo Produto" [(ngModel)]="id" name="name">
+</mat-form-field>
+<button mat-raised-button (click)="readPrductById()">
+    Buscar Produto
+</button>
+
+
 <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="products">
+    <table mat-table [dataSource]="productsSale">
         <!-- Id Column -->
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef>Cod.</th>
